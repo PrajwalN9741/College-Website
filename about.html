@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>clg portel</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+	<section class="sub-header ">
+		<nav>
+			<a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+			<div class="nav-links" id="navlinks">
+				<i class="fas fa-times" id="close" onclick="hide()"></i>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="course.html">COURSE</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+		<i class="fas fa-bars" id="menu" onclick="show()" ></i>
+		</nav>
+	<h1>About US</h1>
+</section>
+
+
+<section class="about-us">
+	<div class="row">
+		<div class="about-col">
+			<h1>We are the best college</h1>
+			<p>The National College is a well-established institution dedicated to academic excellence and holistic student development.
+				 We offer a wide range of courses in Science, Commerce, Management, and Computer Applications, supported by experienced faculty and modern infrastructure.
+				 Our mission is to empower students with knowledge, skills, and values to succeed in a dynamic world.</p>
+				<a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+				</div>
+		<div class="about-col">
+			<img src="images/ncb.png">
+		</div>
+	</div>
+</section>
+
+
+
+<section class="footer">
+		<h4>About Us</h4>
+		<p>
+			Our institution is committed to academic excellence, values, and student development.<br>
+			We provide a conducive learning environment nestled in a lush green campus.
+		</p>
+
+		<div class="icons">
+			<i class="fab fa-facebook"></i>
+			<i class="fab fa-instagram" ></i>
+			<i class="fab fa-linkedin"> </i>
+		</div>
+		<p>&copy; 2025 The National Collage <i class="fas fa-heart"></i> All rights reserved.</p>
+	  </footer>
+	</section>
+
+	<script>
+		var navlinks = document.getElementById("navlinks");
+		function show() {
+			navlinks.style.right = "0";
+		}
+		function hide() {
+			navlinks.style.right = "-200px";
+		}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>clg portel</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+	<section class="sub-header ">
+		<nav>
+			<a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+			<div class="nav-links" id="navlinks">
+				<i class="fas fa-times" id="close" onclick="hide()"></i>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="course.html">COURSE</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+		<i class="fas fa-bars" id="menu" onclick="show()" ></i>
+		</nav>
+	<h1>CONTACT US</h1>
+</section>
+
+
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151348.0589138895!2d77.78189327088528!3d13.655499446032062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb18f6fc6e147a5%3A0x8192b01e7f7508e7!2sThe%20National%20Degree%20Autonomous%20College!5e0!3m2!1sen!2sin!4v1746514968406!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+<section class="contact-us">
+    <div class="row">
+    <div class="contact-col">
+        <div>
+            <i class="fas fa-home"></i>
+            <samp>
+                <h5>CHELUR Road,The National College </h5>
+                <p>Bagepalli,Karnataka, 561207</p>
+            </samp>
+        </div>
+        <div>
+            <i class="fas fa-phone"></i>
+            <samp>
+                <h5>+91 1234567890</h5>
+                <p>Monday to Saturday, 10AM to 5PM </p>
+            </samp>
+        </div>
+        <div>
+            <i class="fas fa-envelope"></i>
+            <samp>
+                <h5>colleg@</h5>
+                <p>thenationcollege@gmail.com </p>
+            </samp>
+        </div>
+    </div>
+    <div class="contact-col">
+        <form action="from-handler.php" method="POST">
+			<input type="text" name="name" placeholder="Enter your Name" required>
+			<input type="email" name="email" placeholder="Enter your Email" required>
+			<input type="text" name="subject" placeholder="Enter your Subject" required>
+			<textarea name="message" rows="8" placeholder="Enter your Message" required></textarea>
+			<button type="submit" class="hero-btn red-btn">Send Message</button>
+		</form>		
+
+    </div>
+
+</div>
+</section>
+
+
+<section class="footer">
+		<h4>About Us</h4>
+		<p>
+			Our institution is committed to academic excellence, values, and student development.<br>
+			We provide a conducive learning environment nestled in a lush green campus.
+		</p>
+
+		<div class="icons">
+			<i class="fab fa-facebook"></i>
+			<i class="fab fa-instagram" ></i>
+			<i class="fab fa-linkedin"> </i>
+		</div>
+		<p>&copy; 2025 The National Collage <i class="fas fa-heart"></i> All rights reserved.</p>
+	  </footer>
+	</section>
+
+	<script>
+		var navlinks = document.getElementById("navlinks");
+		function show() {
+			navlinks.style.right = "0";
+		}
+		function hide() {
+			navlinks.style.right = "-200px";
+		}
+	</script>
+
+
+</body>
+</html>
