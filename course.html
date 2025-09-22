@@ -1,124 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>clg portel</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Portal | Courses</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<section class="sub-header ">
-		<nav>
-			<a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
-			<div class="nav-links" id="navlinks">
-				<i class="fas fa-times" id="close" onclick="hide()"></i>
-				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="course.html">COURSE</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
-			</div>
-		<i class="fas fa-bars" id="menu" onclick="show()" ></i>
-		</nav>
-	<h1>Our Courses</h1>
-</section>
 
-<section class="course">
-	<h1>Course we Offer</h1>
-	<p>We offer Intermediate (PUC) and Degree programs including BCA, B.Com, BBA, and B.Sc, designed to provide quality education and practical skills for a successful career.
-	</p>	
-		  <div class="row">
-			  <div class="course-col">
+  <!-- Header -->
+  <section class="sub-header">
+    <nav>
+      <a href="index.html">
+        <img src="images/logo.png" class="logo" alt="College Logo">
+      </a>
+      <div class="nav-links" id="navlinks">
+        <i class="fas fa-times" id="close" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="course.html" class="active">COURSE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fas fa-bars" id="menu" onclick="showMenu()"></i>
+    </nav>
+    <h1>Our Courses</h1>
+  </section>
 
-				  <h3>Intermediate</h3>
-				  <p>The National College offers Intermediate (PUC) courses in Science, Commerce, and Arts streams. Our programs are designed to build a strong academic foundation with expert guidance, modern facilities, and a focus on both board exam success and career readiness.
-				</p>
-			</div>
-			<div class="course-col">
-				<h3>Degree</h3>
-				<p>The National College offers a variety of undergraduate degree programs including BCA, B.Com, BBA, and B.Sc. Our courses focus on academic excellence, skill development, and career-oriented training to prepare students for the future.
-				</p>
-			</div>
-		</div>
-</section>
+  <!-- Courses Section -->
+  <section class="course">
+    <h1>Courses We Offer</h1>
+    <p>
+      We offer Intermediate (PUC) and Degree programs including BCA, B.Com, BBA, and B.Sc, 
+      designed to provide quality education and practical skills for a successful career.
+    </p>	
 
-<section class="facilities">
-	<h1>Our  facilities</h1>
-	<p>Our experienced and dedicated faculty members provide quality education, mentorship, and support to help students achieve academic and career success.</p>
-<div class="row">
-	<div class="facilities-col">
-		<img src="images/library.jpg">
-		<h3>College Library</h3>
-		<p>Our well-equipped library offers a wide range of books, journals, and digital resources to support students’ academic and research needs.
-		</p>
-	</div>
-	<div class="facilities-col">
-		<img src="images/ncc.jpeg">
-		<h3>NCC In Our College</h3>
-		<p>The National College proudly hosts an active NCC unit that instills discipline, leadership, and a sense of national service among students.
-		</p>
-	</div>
-	<div class="facilities-col">
-		<img src="images/events.jpg">
-		<h3>College Events</h3>
-		<p>The National College organizes various cultural, academic, and sports events throughout the year, encouraging student talent and active participation.
-		</p>
+    <div class="row">
+      <div class="course-col">
+        <h3>Intermediate</h3>
+        <p>
+          The National College offers Intermediate (PUC) courses in Science, Commerce, and Arts streams. 
+          Our programs are designed to build a strong academic foundation with expert guidance, modern facilities, 
+          and a focus on both board exam success and career readiness.
+        </p>
+      </div>
 
-        
-        
-	</div>
-</div>
-<div class="comment-box">
-        <h3>Leave a comment</h3>
+      <div class="course-col">
+        <h3>Degree</h3>
+        <p>
+          The National College offers a variety of undergraduate degree programs including BCA, B.Com, BBA, and B.Sc. 
+          Our courses focus on academic excellence, skill development, and career-oriented training 
+          to prepare students for the future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>
+      Our experienced and dedicated faculty members provide quality education, mentorship, 
+      and support to help students achieve academic and career success.
+    </p>
+
+    <div class="row">
+      <div class="facilities-col">
+        <img src="images/library.jpg" alt="College Library">
+        <h3>College Library</h3>
+        <p>
+          Our well-equipped library offers a wide range of books, journals, 
+          and digital resources to support students’ academic and research needs.
+        </p>
+      </div>
+
+      <div class="facilities-col">
+        <img src="images/ncc.jpeg" alt="NCC Activities">
+        <h3>NCC in Our College</h3>
+        <p>
+          The National College proudly hosts an active NCC unit that instills discipline, 
+          leadership, and a sense of national service among students.
+        </p>
+      </div>
+
+      <div class="facilities-col">
+        <img src="images/events.jpg" alt="College Events">
+        <h3>College Events</h3>
+        <p>
+          The National College organizes various cultural, academic, and sports events throughout the year, 
+          encouraging student talent and active participation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="comment-box">
+      <h3>Leave a Comment</h3>
+      <form class="comment-form" method="POST" action="comment-handler.php">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <textarea name="comment" rows="5" placeholder="Your Comment" required></textarea>
+        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h4>About Us</h4>
+    <p>
+      Our institution is committed to academic excellence, values, and student development.<br>
+      We provide a conducive learning environment nestled in a lush green campus.
+    </p>
+
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
     
-        <form class="comment-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Enter Email">
-            <textarea rows="5" placeholder="Your comment"></textarea>
-            <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
-        </form>
+    <p>&copy; 2025 The National College <i class="fas fa-heart"></i> All rights reserved.</p>
+  </footer>
 
-
-
-     </div>
-</section>
-
-<
-
-
-
-<section class="footer">
-		<h4>About Us</h4>
-		<p>
-			Our institution is committed to academic excellence, values, and student development.<br>
-			We provide a conducive learning environment nestled in a lush green campus.
-		</p>
-
-		<div class="icons">
-			<i class="fab fa-facebook"></i>
-			<i class="fab fa-instagram" ></i>
-			<i class="fab fa-linkedin"> </i>
-		</div>
-		<p>&copy; 2025 The National Collage <i class="fas fa-heart"></i> All rights reserved.</p>
-	  </footer>
-	</section>
-
-	<script>
-		var navlinks = document.getElementById("navlinks");
-		function show() {
-			navlinks.style.right = "0";
-		}
-		function hide() {
-			navlinks.style.right = "-200px";
-		}
-	</script>
-
+  <!-- JavaScript -->
+  <script>
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+  </script>
 
 </body>
 </html>
