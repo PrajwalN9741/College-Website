@@ -337,7 +337,7 @@ nav .fas {
 
 /* ===== Sub Header ===== */
 .sub-header {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/about.jpg);
   background-position: center;
@@ -347,7 +347,7 @@ nav .fas {
 }
 
 .sub-header h1 {
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 32px;
   font-weight: 600;
 }
