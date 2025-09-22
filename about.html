@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About Us - The National College Portal</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Portal | About Us</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="The National College is committed to academic excellence, student development, and values. Explore our courses in Science, Commerce, Management, and Computer Applications.">
+  <meta name="keywords" content="College, Education, Courses, National College, About Us, Student Portal">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header class="sub-header">
-		<nav>
-			<a href="index.html"><img src="images/logo.png" class="logo" alt="The National College Logo"></a>
-			<div class="nav-links" id="navlinks">
-				<i class="fas fa-times" id="close" onclick="hide()"></i>
-				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="course.html">COURSE</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
-			</div>
-			<i class="fas fa-bars" id="menu" onclick="show()"></i>
-		</nav>
-		<h1>About Us</h1>
-	</header>
+  
+  <!-- Header Section -->
+  <header class="sub-header">
+    <nav>
+      <a href="index.html">
+        <img src="images/logo.png" class="logo" alt="College Logo">
+      </a>
+      <div class="nav-links" id="navlinks">
+        <i class="fas fa-times" id="close" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li>
+          <li><a href="course.html">COURSE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fas fa-bars" id="menu" onclick="showMenu()"></i>
+    </nav>
+    <h1>About Us</h1>
+  </header>
 
-	<main>
-		<section class="about-us">
-			<div class="row">
-				<div class="about-col">
-					<h2>We are a Premier Institution for Higher Learning</h2>
-					<p>The National College is a well-established institution dedicated to academic excellence and holistic student development. We offer a wide range of courses in Science, Commerce, Management, and Computer Applications, supported by experienced faculty and modern infrastructure. Our mission is to empower students with knowledge, skills, and values to succeed in a dynamic world.</p>
-					<a href="course.html" class="hero-btn red-btn">EXPLORE OUR COURSES</a>
-				</div>
-				<div class="about-col">
-					<img src="images/ncb.png" alt="A view of The National College campus building.">
-				</div>
-			</div>
-		</section>
+  <!-- About Section -->
+  <section class="about-us">
+    <div class="row">
+      <div class="about-col">
+        <h2>We are the best college</h2>
+        <p>
+          The National College is a well-established institution dedicated to academic excellence and holistic student development.
+          We offer a wide range of courses in Science, Commerce, Management, and Computer Applications, supported by experienced faculty and modern infrastructure.
+          Our mission is to empower students with knowledge, skills, and values to succeed in a dynamic world.
+        </p>
+        <a href="course.html" class="hero-btn red-btn">EXPLORE NOW</a>
+      </div>
+      <div class="about-col">
+        <img src="images/ncb.png" alt="National College Campus">
+      </div>
+    </div>
+  </section>
 
-		<section class="mission-vision" style="width: 80%; margin: auto; text-align: center; padding-top: 50px;">
-			<h3>Our Mission & Vision</h3>
-			<p>Guiding our journey towards academic excellence are our core principles.</p>
-			<div class="row">
-				<div class="about-col" style="text-align: left;">
-					<h4><i class="fas fa-bullseye"></i> Our Mission</h4>
-					<p>To empower students with cutting-edge knowledge, critical thinking skills, and unwavering ethical values, preparing them to be leaders and innovators in a dynamic global landscape.</p>
-				</div>
-				<div class="about-col" style="text-align: left;">
-					<h4><i class="fas fa-eye"></i> Our Vision</h4>
-					<p>To be a beacon of higher education, renowned for our commitment to excellence, research, and fostering a community of lifelong learners who contribute positively to society.</p>
-				</div>
-			</div>
-		</section>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <h4>About Us</h4>
+    <p>
+      Our institution is committed to academic excellence, values, and student development.<br>
+      We provide a conducive learning environment nestled in a lush green campus.
+    </p>
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 The National College <i class="fas fa-heart"></i> All rights reserved.</p>
+  </footer>
 
-	</main>
-
-	<footer class="footer">
-		<h4>About Us</h4>
-		<p>
-			Our institution is committed to academic excellence, values, and student development.<br>
-			We provide a conducive learning environment nestled in a lush green campus.
-		</p>
-		<div class="icons">
-			<a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
-			<a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-			<a href="#" aria-label="Connect with us on LinkedIn"><i class="fab fa-linkedin"></i></a>
-		</div>
-		<p>&copy; 2025 The National College <i class="fas fa-heart" aria-hidden="true"></i> All rights reserved.</p>
-	</footer>
-
-	<script>
-		var navlinks = document.getElementById("navlinks");
-		function show() {
-			navlinks.style.right = "0";
-		}
-		function hide() {
-			navlinks.style.right = "-200px";
-		}
-	</script>
+  <!-- JavaScript -->
+  <script>
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+  </script>
 
 </body>
 </html>
