@@ -1,0 +1,20 @@
+[
+  {
+    "form_type": "admission",
+    "name": "prajwal prajju",
+    "email": "prajwalrajn9@gmail.com",
+    "mobile": "9741245850",
+    "program": "bca",
+    "timestamp": "2026-02-12 23:35:52",
+    "status": "Reviewed"
+  },
+  {
+    "form_type": "admission",
+    "name": "Prajwal N",
+    "email": "prajwalrajn9@gmail.com",
+    "mobile": "9741245850",
+    "program": "bca",
+    "timestamp": "2026-02-12 23:38:57",
+    "status": "Reviewed"
+  }
+]

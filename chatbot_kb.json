@@ -1,0 +1,338 @@
+{
+    "college": "National College, Bagepalli",
+    "global_keywords": [
+        "national college bagepalli",
+        "bagepalli clg",
+        "nc bagepalli",
+        "clg",
+        "college",
+        "nc"
+    ],
+    "knowledge_base": [
+        {
+            "category": "History & Foundation",
+            "questions": [
+                {
+                    "question": "When was the college established?",
+                    "keywords": [
+                        "established",
+                        "started",
+                        "founded year",
+                        "clg started",
+                        "when started"
+                    ],
+                    "answer": "<strong>National College, Bagepalli</strong> was established in <strong>July 1978</strong>."
+                },
+                {
+                    "question": "Who founded the college?",
+                    "keywords": [
+                        "founder",
+                        "who started clg",
+                        "dr hn",
+                        "founder name"
+                    ],
+                    "answer": "The college was founded under <strong>Dr. H. Narasimhaiah (Dr. HN)</strong>."
+                },
+                {
+                    "question": "Who manages the college?",
+                    "keywords": [
+                        "managed by",
+                        "management",
+                        "nes",
+                        "who runs clg"
+                    ],
+                    "answer": "It is managed by <strong>National Education Society of Karnataka (NES)</strong>."
+                },
+                {
+                    "question": "What inspired the creation of this college?",
+                    "keywords": [
+                        "inspiration",
+                        "purpose",
+                        "why created"
+                    ],
+                    "answer": "It was established to promote <strong>rural education and academic excellence</strong>."
+                },
+                {
+                    "question": "Is the college part of a larger institution?",
+                    "keywords": [
+                        "part of nes",
+                        "group of colleges"
+                    ],
+                    "answer": "Yes, it operates under <strong>NES</strong>, which runs multiple institutions."
+                }
+            ]
+        },
+        {
+            "category": "Academics",
+            "questions": [
+                {
+                    "question": "What undergraduate programs are offered?",
+                    "keywords": [
+                        "courses",
+                        "programs",
+                        "degrees",
+                        "what courses in clg"
+                    ],
+                    "answer": "Programs include <strong>BBA, BA, B.Com, B.Sc, and BCA</strong>."
+                },
+                {
+                    "question": "Is BCA available?",
+                    "keywords": [
+                        "bca",
+                        "computer course",
+                        "bca in clg"
+                    ],
+                    "answer": "Yes, <strong>BCA</strong> is available."
+                },
+                {
+                    "question": "Does the college offer science programs?",
+                    "keywords": [
+                        "bsc",
+                        "science course"
+                    ],
+                    "answer": "Yes, <strong>B.Sc programs</strong> are offered."
+                },
+                {
+                    "question": "What commerce courses are available?",
+                    "keywords": [
+                        "bcom",
+                        "bba",
+                        "commerce"
+                    ],
+                    "answer": "<strong>B.Com</strong> and <strong>BBA</strong> are available."
+                },
+                {
+                    "question": "Are arts programs available?",
+                    "keywords": [
+                        "ba course",
+                        "arts"
+                    ],
+                    "answer": "Yes, <strong>BA</strong> is offered."
+                },
+                {
+                    "question": "How many degree programs are offered?",
+                    "keywords": [
+                        "how many degrees",
+                        "degree count"
+                    ],
+                    "answer": "The college offers <strong>7 degree programs</strong>."
+                },
+                {
+                    "question": "Does it follow semester system?",
+                    "keywords": [
+                        "semester",
+                        "exam pattern"
+                    ],
+                    "answer": "Yes, the college follows a <strong>semester system</strong>."
+                }
+            ]
+        },
+        {
+            "category": "Statistics",
+            "questions": [
+                {
+                    "question": "How many students are enrolled?",
+                    "keywords": [
+                        "student strength",
+                        "student count",
+                        "how many students in clg"
+                    ],
+                    "answer": "Approximately <strong>1306 students</strong> are enrolled."
+                },
+                {
+                    "question": "What is the faculty strength?",
+                    "keywords": [
+                        "faculty count",
+                        "teachers",
+                        "staff strength"
+                    ],
+                    "answer": "There are around <strong>33 faculty members</strong>."
+                },
+                {
+                    "question": "What is the campus size?",
+                    "keywords": [
+                        "campus area",
+                        "campus acres"
+                    ],
+                    "answer": "The campus covers <strong>7 acres</strong>."
+                },
+                {
+                    "question": "Is it a co-educational institution?",
+                    "keywords": [
+                        "co ed",
+                        "boys and girls"
+                    ],
+                    "answer": "Yes, it is a <strong>co-educational institution</strong>."
+                }
+            ]
+        },
+        {
+            "category": "Infrastructure",
+            "questions": [
+                {
+                    "question": "Does the college have a library?",
+                    "keywords": [
+                        "library",
+                        "books"
+                    ],
+                    "answer": "Yes, the library contains over <strong>40,000 books</strong>."
+                },
+                {
+                    "question": "Does the campus have Wi-Fi?",
+                    "keywords": [
+                        "wifi",
+                        "internet"
+                    ],
+                    "answer": "Yes, <strong>Wi-Fi</strong> is available."
+                },
+                {
+                    "question": "Are computer labs available?",
+                    "keywords": [
+                        "computer lab",
+                        "lab facilities"
+                    ],
+                    "answer": "Yes, modern <strong>computer labs</strong> are available."
+                },
+                {
+                    "question": "Is there an auditorium?",
+                    "keywords": [
+                        "auditorium",
+                        "hall"
+                    ],
+                    "answer": "Yes, there is a <strong>500 seating capacity auditorium</strong>."
+                },
+                {
+                    "question": "Is there a cafeteria?",
+                    "keywords": [
+                        "canteen",
+                        "food"
+                    ],
+                    "answer": "Yes, a <strong>hygienic cafeteria</strong> is available."
+                }
+            ]
+        },
+        {
+            "category": "Career & Placement",
+            "questions": [
+                {
+                    "question": "Does the college have a placement cell?",
+                    "keywords": [
+                        "placement",
+                        "job support"
+                    ],
+                    "answer": "Yes, there is a <strong>Training and Placement Cell</strong>."
+                },
+                {
+                    "question": "Are students trained for interviews?",
+                    "keywords": [
+                        "interview training",
+                        "skill training"
+                    ],
+                    "answer": "Yes, mock interviews and training sessions are conducted."
+                },
+                {
+                    "question": "Are industrial visits organized?",
+                    "keywords": [
+                        "industrial visit",
+                        "educational tour"
+                    ],
+                    "answer": "Yes, industrial visits are regularly organized."
+                }
+            ]
+        },
+        {
+            "category": "Student Life",
+            "questions": [
+                {
+                    "question": "Are cultural events conducted?",
+                    "keywords": [
+                        "events",
+                        "cultural programs"
+                    ],
+                    "answer": "Yes, cultural and academic events are conducted annually."
+                },
+                {
+                    "question": "Are NSS programs available?",
+                    "keywords": [
+                        "nss",
+                        "social service"
+                    ],
+                    "answer": "Yes, <strong>NSS programs</strong> are available."
+                },
+                {
+                    "question": "Is there a student council?",
+                    "keywords": [
+                        "student body",
+                        "student leadership"
+                    ],
+                    "answer": "Yes, a student council represents student interests."
+                }
+            ]
+        },
+        {
+            "category": "Admissions",
+            "questions": [
+                {
+                    "question": "How can I apply?",
+                    "keywords": [
+                        "apply",
+                        "admission process"
+                    ],
+                    "answer": "You can apply by visiting the college with required documents."
+                },
+                {
+                    "question": "When does admission start?",
+                    "keywords": [
+                        "admission start date"
+                    ],
+                    "answer": "Admissions begin after PUC results are announced."
+                },
+                {
+                    "question": "What documents are required for admission?",
+                    "keywords": [
+                        "documents needed",
+                        "admission documents"
+                    ],
+                    "answer": "Marks cards, transfer certificate, ID proof, and photographs are required."
+                },
+                {
+                    "question": "Are scholarships available?",
+                    "keywords": [
+                        "scholarship",
+                        "financial aid"
+                    ],
+                    "answer": "Yes, eligible students can apply for government scholarships."
+                }
+            ]
+        },
+        {
+            "category": "General",
+            "questions": [
+                {
+                    "question": "Why should I join this college?",
+                    "keywords": [
+                        "why join",
+                        "benefits"
+                    ],
+                    "answer": "The college offers <strong>quality education and rural empowerment</strong>."
+                },
+                {
+                    "question": "Is it good for rural students?",
+                    "keywords": [
+                        "rural students",
+                        "village students"
+                    ],
+                    "answer": "Yes, it was established to support rural students."
+                },
+                {
+                    "question": "Is the environment safe?",
+                    "keywords": [
+                        "safe campus",
+                        "safety"
+                    ],
+                    "answer": "Yes, the campus is safe and disciplined."
+                }
+            ]
+        }
+    ]
+}

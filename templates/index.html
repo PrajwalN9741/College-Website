@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Portal</title>
+  <link rel="icon" type="image/png" href=\"/static/images/logo.png" />
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <section class="header">
+    <nav>
+      <a href="/"><img src="/static/images/logo.png" class="logo" alt="College Logo"></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fas fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/course">COURSE</a></li>
+          <li><a href="/admission">ADMISSIONS</a></li>
+          <li><a href="/fest">FEST</a></li>
+          <li><a href="/faculty">FACULTY</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1 id="hero-title">The National College</h1>
+      <p id="hero-subtitle">Explore our college website</p>
+      <a href=\"/about\" class="hero-btn">Visit us to know more</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="course">
+    <h1>Courses We Offer</h1>
+    <p>
+      We offer Intermediate (PUC) and Degree programs including BCA, B.Com, BBA, and B.Sc,
+      designed to provide quality education and practical skills for a successful career.
+    </p>
+    <div class="row" id="courses-container">
+      <div class="course-col glass-card">
+        <h3>Intermediate</h3>
+        <p>
+          The National College offers Intermediate (PUC) courses in Science, Commerce, and Arts streams.
+          Our programs are designed to build a strong academic foundation with expert guidance,
+          modern facilities, and a focus on both board exam success and career readiness.
+        </p>
+      </div>
+      <div class="course-col glass-card">
+        <h3>Degree</h3>
+        <p>
+          The National College offers a variety of undergraduate degree programs including BCA, B.Com, BBA, and B.Sc.
+          Our courses focus on academic excellence, skill development, and career-oriented training to prepare students
+          for the future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Section -->
+  <section class="campus">
+    <h1>Our College Campus</h1>
+    <p>
+      The National College campus offers a vibrant and student-friendly environment with spacious classrooms,
+      modern labs, a well-stocked library, and excellent sports and recreational facilities.
+      It’s a perfect blend of academics and campus life that supports overall student growth.
+    </p>
+    <div class="row">
+      <div class="campus-col">
+        <img src="/static/images/branch2.jpg" alt="Bagepalli Campus">
+        <div class="layer">
+          <h3>BAGEPALLI</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="/static/images/branch1.jpg" alt="Basavanagudi Campus">
+        <div class="layer">
+          <h3>BASAVANAGUDI</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>
+      Our experienced and dedicated faculty members provide quality education, mentorship,
+      and support to help students achieve academic and career success.
+    </p>
+    <div class="row" id="facilities-container">
+      <!-- Loaded dynamically -->
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h1>What Our Students Say</h1>
+    <p>Hear from our alumni and current students about their experience at The National College.</p>
+
+    <div class="row" id="testimonials-container">
+      <!-- Testimonials loaded dynamically -->
+    </div>
+  </section>
+
+  <!-- Achievements / Stats Section -->
+  <section class="achievements">
+    <h1>Our Achievements</h1>
+    <p>We take pride in our numbers and the impact we create.</p>
+
+    <div class="stats-row" id="stats-container">
+      <div class="stat-col glass-card">
+        <i class="fas fa-user-graduate"></i>
+        <h2>1500+</h2>
+        <p>Graduates</p>
+      </div>
+
+      <div class="stat-col glass-card">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h2>50+</h2>
+        <p>Expert Faculty</p>
+      </div>
+
+      <div class="stat-col glass-card">
+        <i class="fas fa-award"></i>
+        <h2>25+</h2>
+        <p>Awards Won</p>
+      </div>
+
+      <div class="stat-col glass-card">
+        <i class="fas fa-briefcase"></i>
+        <h2>95%</h2>
+        <p>Placement Rate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action Section -->
+  <section class="cta">
+    <h1>Enroll For Our Various Courses<br>Admissions Open – Apply From Anywhere</h1>
+    <a href=\"/contact\" class="hero-btn">CONTACT US</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h4 id="footer-portal-name">About Us</h4>
+    <p id="footer-motto">
+      Our institution is committed to academic excellence, values, and student development.<br>
+      We provide a conducive learning environment nestled in a lush green campus.
+    </p>
+
+    <div class="newsletter-glass">
+      <form action="">
+        <input type="email" placeholder="Enter your email for updates" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p id="footer-copyright">&copy; 2025 The National College <i class="fas fa-heart"></i> All rights reserved.</p>
+
+    <div style="margin-top: 15px; opacity: 0.5; font-size: 0.8rem;">
+      <a href="/admin" style="color: #fff; text-decoration: none;">Admin Portal</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Menu -->
+  <script>
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+  </script>
+
+  <!-- Chatbot Widget -->
+  <div class="chat-icon" id="chat-icon">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      <h3>College Assistant</h3>
+      <i class="fas fa-times" id="close-chat"></i>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="msg bot-msg">Hello! How can I help you today?</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <script src="/static/chatbot.js"></script>
+  <script>
+    // CMS Dynamic Content Loader
+    async function initCMS() {
+      try {
+        const res = await fetch('/api/content');
+        if (!res.ok) return;
+        const data = await res.json();
+
+        // Update Hero
+        if (data.homepage) {
+          document.getElementById('hero-title').innerText = data.homepage.hero_title;
+          document.getElementById('hero-subtitle').innerText = data.homepage.hero_subtitle;
+
+          // Update Stats
+          const statsHtml = data.homepage.stats.map(s => `
+            <div class="stat-col glass-card">
+              <i class="${s.icon}"></i>
+              <h2>${s.value}</h2>
+              <p>${s.label}</p>
+            </div>
+          `).join('');
+          document.getElementById('stats-container').innerHTML = statsHtml;
+        }
+
+        // Update Facilities
+        if (data.facilities) {
+          const facilitiesHtml = data.facilities.map(f => `
+            <div class="facilities-col glass-card">
+              <img src="${f.image}" alt="${f.title}">
+              <h3>${f.title}</h3>
+              <p>${f.description}</p>
+            </div>
+          `).join('');
+          document.getElementById('facilities-container').innerHTML = facilitiesHtml;
+        }
+
+        // Update Testimonials
+        if (data.testimonials) {
+          const testimonialsHtml = data.testimonials.map(t => `
+            <div class="testimonial-col glass-card">
+              <img src="${t.image}" alt="${t.name}">
+              <div>
+                <p>"${t.text}"</p>
+                <h3>${t.name}</h3>
+                ${Array(t.rating).fill('<i class="fas fa-star"></i>').join('')}
+              </div>
+            </div>
+          `).join('');
+          document.getElementById('testimonials-container').innerHTML = testimonialsHtml;
+        }
+
+        // Update Courses
+        if (data.courses) {
+          const coursesHtml = data.courses.slice(0, 3).map(c => `
+            <div class="course-col glass-card">
+              <h3>${c.title}</h3>
+              <p>${c.description}</p>
+            </div>
+          `).join('');
+          document.getElementById('courses-container').innerHTML = coursesHtml;
+        }
+
+        // Update Site Info (Global)
+        if (data.site_info) {
+          document.getElementById('footer-portal-name').innerText = "About " + data.site_info.portal_name;
+          document.getElementById('footer-motto').innerText = data.site_info.motto;
+          document.getElementById('footer-copyright').innerHTML = `&copy; ${new Date().getFullYear()} ${data.site_info.portal_name} <i class="fas fa-heart"></i> All rights reserved.`;
+        }
+      } catch (e) { console.error("CMS Load Fail:", e); }
+    }
+    initCMS();
+  </script>
+</body>
+
+</html>

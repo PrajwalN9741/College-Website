@@ -1,0 +1,485 @@
+{
+  "admissions": {
+    "fees": [
+      {
+        "course": "BCA / B.Sc (Comp. Sci)",
+        "fees": "₹45,000 / Year"
+      },
+      {
+        "course": "B.Com / BBA",
+        "fees": "₹35,000 / Year"
+      },
+      {
+        "course": "BA / B.Sc (Gen)",
+        "fees": "₹25,000 / Year"
+      },
+      {
+        "course": "M.Com",
+        "fees": "₹55,000 / Year"
+      }
+    ],
+    "heading": "Begin your career with National College",
+    "programs": [
+      {
+        "desc": "Focused on software development, data fundamentals and practical projects.",
+        "info": "3 Years • Intake: 120",
+        "name": "BCA"
+      },
+      {
+        "desc": "Streams available: Physics, Chemistry, Mathematics — research & lab focus.",
+        "info": "3 Years",
+        "name": "B.Sc"
+      },
+      {
+        "desc": "Build management, leadership, and entrepreneurship skills for business careers.",
+        "info": "3 Years",
+        "name": "BBA"
+      },
+      {
+        "desc": "Explore humanities and social sciences with a multidisciplinary approach.",
+        "info": "3 Years",
+        "name": "BA"
+      },
+      {
+        "desc": "Comprehensive commerce and accounting foundation for finance careers.",
+        "info": "3 Years",
+        "name": "B.Com"
+      },
+      {
+        "desc": "Advanced postgraduate commerce program with focus on research & finance.",
+        "info": "2 Years",
+        "name": "M.Com"
+      }
+    ],
+    "stats": [
+      {
+        "label": "Recruiters",
+        "value": "300+"
+      },
+      {
+        "label": "Placement rate",
+        "value": "95%"
+      },
+      {
+        "label": "Highest CTC",
+        "value": "₹12 LPA"
+      }
+    ],
+    "subheading": "Join industry-aligned programs — hands-on learning, dedicated placements, and scholarships for merit and need."
+  },
+  "courses": [
+    {
+      "category": "PUC",
+      "description": "The National College offers Intermediate (PUC) courses in Science, Commerce, and Arts streams. Our programs are designed to build a strong academic foundation with expert guidance.",
+      "title": "Intermediate"
+    },
+    {
+      "category": "Degree",
+      "description": "The National College offers a variety of undergraduate degree programs including BCA, B.Com, BBA, and B.Sc.",
+      "title": "Degree"
+    }
+  ],
+  "facilities": [
+    {
+      "description": "Our well-equipped library offers a wide range of books, journals, and digital resources to support students’ academic and research needs.",
+      "image": "/static/images/library.jpg",
+      "title": "College Library"
+    },
+    {
+      "description": "The National College proudly hosts an active NCC unit that instills discipline, leadership, and a sense of national service.",
+      "image": "/static/images/ncc.jpeg",
+      "title": "NCC In Our College"
+    },
+    {
+      "description": "The National College organizes various cultural, academic, and sports events throughout the year, encouraging student talent.",
+      "image": "/static/images/events.jpg",
+      "title": "College Events"
+    },
+    {
+      "description": "",
+      "image": "/static/images/library.jpg",
+      "title": "New Facility"
+    }
+  ],
+  "faculty": [
+    {
+      "course": "BSc",
+      "dept": "Physics",
+      "email": "imtiaz@college.edu",
+      "name": "Imtiaz Mubeen Ahmad",
+      "role": "Principal · HOD - Physics",
+      "spec": "Applied Physics / Administration"
+    },
+    {
+      "course": "BSc|BA",
+      "dept": "Mathematics",
+      "email": "shaila@college.edu",
+      "name": "Shaila",
+      "role": "Vice Principal · HOD - Mathematics",
+      "spec": "Mathematics Education"
+    },
+    {
+      "course": "BCA",
+      "dept": "Computer Science",
+      "email": "anusha@college.edu",
+      "name": "Anusha Priyadarshini",
+      "role": "HOD - Computer Science",
+      "spec": "Software Engineering"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "prathap@college.edu",
+      "name": "Prathap T.A",
+      "role": "HOD - Commerce",
+      "spec": "Accounting"
+    },
+    {
+      "course": "BSc",
+      "dept": "Zoology",
+      "email": "shivakumar@college.edu",
+      "name": "Shivakumar K N",
+      "role": "HOD - Zoology",
+      "spec": "Animal Biology"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "shruthi@college.edu",
+      "name": "Shruthi R",
+      "role": "Commerce",
+      "spec": "Business Studies"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "chandrashekar@college.edu",
+      "name": "Chandrashekar S",
+      "role": "Commerce",
+      "spec": "Finance"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "keshava@college.edu",
+      "name": "Keshava B.V",
+      "role": "Commerce",
+      "spec": "Taxation"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "ambika@college.edu",
+      "name": "Ambika A N",
+      "role": "Commerce",
+      "spec": "Management"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "narendra@college.edu",
+      "name": "Narendra C L",
+      "role": "Commerce",
+      "spec": "Economics"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "divyashree@college.edu",
+      "name": "L Divyashree",
+      "role": "Commerce",
+      "spec": "Business Law"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "apsara@college.edu",
+      "name": "Apsara",
+      "role": "Commerce",
+      "spec": "Auditing"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "sudha@college.edu",
+      "name": "Sudha",
+      "role": "Commerce",
+      "spec": "Corporate Accounting"
+    },
+    {
+      "course": "BCA",
+      "dept": "Computer Science",
+      "email": "gayithri@college.edu",
+      "name": "Gayithri M",
+      "role": "Computer Science",
+      "spec": "Data Structures"
+    },
+    {
+      "course": "BCA",
+      "dept": "Computer Science",
+      "email": "srihari@college.edu",
+      "name": "Sri Hari K V",
+      "role": "Computer Science",
+      "spec": "Operating Systems / Programming"
+    },
+    {
+      "course": "BCA",
+      "dept": "Computer Science",
+      "email": "bhargavi@college.edu",
+      "name": "Bhargavi R",
+      "role": "Computer Science",
+      "spec": "Software / Systems"
+    },
+    {
+      "course": "BCA",
+      "dept": "Computer Science",
+      "email": "kamala@college.edu",
+      "name": "Kamala",
+      "role": "Computer Science",
+      "spec": "Databases"
+    },
+    {
+      "course": "BCA",
+      "dept": "Computer Science",
+      "email": "santhosh@college.edu",
+      "name": "Santhosh Reddy N",
+      "role": "Computer Science",
+      "spec": "Machine Learning"
+    },
+    {
+      "course": "BA",
+      "dept": "Economics",
+      "email": "ranganath@college.edu",
+      "name": "Ranganath H S",
+      "role": "Economics",
+      "spec": "Macro Economics"
+    },
+    {
+      "course": "English",
+      "dept": "English",
+      "email": "naresha@college.edu",
+      "name": "Naresha N",
+      "role": "HOD - English",
+      "spec": "Communication Skills"
+    },
+    {
+      "course": "English",
+      "dept": "English",
+      "email": "pruthviraj@college.edu",
+      "name": "Pruthviraj",
+      "role": "English",
+      "spec": "Literature"
+    },
+    {
+      "course": "BA",
+      "dept": "History",
+      "email": "prameela@college.edu",
+      "name": "Prameela",
+      "role": "History",
+      "spec": "Modern History"
+    },
+    {
+      "course": "Kannada",
+      "dept": "Kannada",
+      "email": "asharani@college.edu",
+      "name": "K L Asharani",
+      "role": "HOD - Kannada",
+      "spec": "Folk Literature"
+    },
+    {
+      "course": "Kannada",
+      "dept": "Kannada",
+      "email": "ravi@college.edu",
+      "name": "Ravi",
+      "role": "Kannada",
+      "spec": "Kannada Literature"
+    },
+    {
+      "course": "BA",
+      "dept": "Political Science",
+      "email": "ashwini@college.edu",
+      "name": "Ashwini",
+      "role": "Political Science",
+      "spec": "Political Theory"
+    },
+    {
+      "course": "BA",
+      "dept": "Sociology",
+      "email": "naresha.hr@college.edu",
+      "name": "Naresha H R",
+      "role": "Sociology",
+      "spec": "Social Research"
+    },
+    {
+      "course": "BA",
+      "dept": "Sociology",
+      "email": "chandrap@college.edu",
+      "name": "Chandrappa K",
+      "role": "Sociology",
+      "spec": "Community Studies"
+    },
+    {
+      "course": "BSc",
+      "dept": "Zoology",
+      "email": "manjula@college.edu",
+      "name": "Manjula B G",
+      "role": "Zoology",
+      "spec": "Wildlife Biology"
+    },
+    {
+      "course": "BSc",
+      "dept": "Botany",
+      "email": "mounisha@college.edu",
+      "name": "Mounisha",
+      "role": "Botany",
+      "spec": "Plant Sciences"
+    },
+    {
+      "course": "BSc",
+      "dept": "Chemistry",
+      "email": "renuka@college.edu",
+      "name": "Renuka P H",
+      "role": "Chemistry",
+      "spec": "Inorganic Chemistry"
+    },
+    {
+      "course": "BSc",
+      "dept": "Chemistry",
+      "email": "jagadeesh@college.edu",
+      "name": "Jagadeesh",
+      "role": "Chemistry",
+      "spec": "Organic Chemistry"
+    },
+    {
+      "course": "BCom|BBA",
+      "dept": "Commerce",
+      "email": "rajesh.kumar@college.edu",
+      "name": "Rajesh Kumar",
+      "role": "Commerce",
+      "spec": "Business Finance"
+    }
+  ],
+  "fest": {
+    "date_text": "March 5–7, 2026",
+    "faq": [
+      {
+        "a": "Yes! Entry is free for all current students with a valid ID card. Outsiders need to register for a pass.",
+        "q": "Is entry free for students?"
+      },
+      {
+        "a": "Limited slots are available for spot registration. We highly recommend online registration.",
+        "q": "Can I register on the spot?"
+      },
+      {
+        "a": "Yes, we have designated parking areas for two-wheelers and four-wheelers near the auditorium gate.",
+        "q": "Is parking available?"
+      }
+    ],
+    "gallery": [
+      {
+        "caption": "Live Concert",
+        "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=400"
+      },
+      {
+        "caption": "DJ Night",
+        "url": "data:image/jpeg;base64,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"
+      },
+      {
+        "caption": "The Crowd",
+        "url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=400"
+      },
+      {
+        "caption": "Group Dance",
+        "url": "https://images.unsplash.com/photo-1543906965-f9520aa2ed8a?q=80&w=400"
+      }
+    ],
+    "lead": "A three-day grand celebration of academic excellence, cultural heritage, and youthful creativity.",
+    "marquee": "🎭 College Day 2026: 3 Days of Pure Magic! | 🎶 Day 1: Ethnic Day & Fine Arts | 🕺 Day 2: Inter-College Dance & Music | 🏆 Day 3: Grand Finale & Award Ceremony!",
+    "schedule": [
+      {
+        "day": "1",
+        "desc": "Traditional attire, flag hoisting, and auspicious lighting of the lamp.",
+        "name": "CULTURAL DAWN",
+        "time": "March 5 • 09:30 AM",
+        "title": "Ethnic Day & Inauguration"
+      },
+      {
+        "day": "1",
+        "desc": "Rangoli, Painting, and Craft exhibition showcasing student talent.",
+        "name": "CULTURAL DAWN",
+        "time": "March 5 • 01:00 PM",
+        "title": "Fine Arts Festival"
+      },
+      {
+        "day": "2",
+        "desc": "Music and Variety squads from across the state compete for glory.",
+        "name": "COMPETITION CRAZE",
+        "time": "March 6 • 10:00 AM",
+        "title": "Inter-College Battle"
+      },
+      {
+        "day": "3",
+        "desc": "Scholarships, Academic Awards, and the Principal's Annual Report.",
+        "name": "GRAND COLLEGE DAY",
+        "time": "March 7 • 10:30 AM",
+        "title": "Annual Day Ceremony"
+      }
+    ],
+    "target_date": "2026-03-05T09:00:00+05:30",
+    "title": "College Day & VIBRANCE 2026"
+  },
+  "homepage": {
+    "hero_subtitle": "Explore our college website",
+    "hero_title": "The National College",
+    "stats": [
+      {
+        "icon": "fas fa-user-graduate",
+        "label": "Graduates",
+        "value": "1500+"
+      },
+      {
+        "icon": "fas fa-chalkboard-teacher",
+        "label": "Expert Faculty",
+        "value": "50+"
+      },
+      {
+        "icon": "fas fa-award",
+        "label": "Awards Won",
+        "value": "25+"
+      },
+      {
+        "icon": "fas fa-briefcase",
+        "label": "Placement Rate",
+        "value": "95%"
+      }
+    ]
+  },
+  "site_info": {
+    "address": "Bagepalli, Karnataka - 561207",
+    "admission_year": "2026–27",
+    "email": "info@nationalcollege.edu",
+    "motto": "Education for Enlightenment",
+    "phone": "+91 123 456 7890",
+    "portal_name": "National College Admin"
+  },
+  "testimonials": [
+    {
+      "image": "/static/images/user1.jpg",
+      "name": "Christine Berkley",
+      "rating": 5,
+      "text": "The faculty here is incredibly supportive. The practical exposure I got in the BCA program helped me land my dream job."
+    },
+    {
+      "image": "/static/images/user2.jpg",
+      "name": "David Byer",
+      "rating": 5,
+      "text": "The campus environment is perfect for learning. Specifically, the library and labs are world-class."
+    },
+    {
+      "image": "/static/images/user1.jpg",
+      "name": "Student Name",
+      "rating": 5,
+      "text": ""
+    }
+  ]
+}

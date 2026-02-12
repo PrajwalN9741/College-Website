@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Faculty Directory — THE NATIONAL COLLEGE</title>
+  <link rel="icon" type="image/png" href="/static/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    :root {
+      --accent: #ff4d6d;
+      --accent2: #6c5ce7;
+      --bg1: #0a0f1c;
+      --bg2: #161b2e;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-hover: rgba(255, 255, 255, 0.1);
+      --border: rgba(255, 255, 255, 0.1);
+      --text-main: #e8eefc;
+      --text-muted: #b3bdd3;
+    }
+
+    body.faculty-page {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(-45deg, var(--bg1), var(--bg2), #1a2340, #0f1724);
+      background-size: 400% 400%;
+      animation: bgmove 20s ease infinite;
+      color: var(--text-main);
+    }
+
+    @keyframes bgmove {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    header.faculty-header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header.faculty-header h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #fff, #b3bdd3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .controls {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .search {
+      padding: 12px 18px;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: #fff;
+      min-width: 260px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .tab[data-active="true"] {
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      color: #fff;
+    }
+
+    .faculty-container {
+      max-width: 1200px;
+      margin: 30px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      height: 420px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      border: 1px solid var(--border);
+      background: rgba(26, 30, 46, 0.6);
+      backdrop-filter: blur(12px);
+      box-sizing: border-box;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      background: var(--glass);
+      border: 2px solid var(--border);
+      margin-bottom: 15px;
+    }
+
+    /* Print styles omitted for brevity but logic remains */
+    @media print {
+      body.faculty-page {
+        background: #fff !important;
+        color: #000 !important;
+      }
+
+      .controls,
+      nav,
+      .chat-icon,
+      .chat-box,
+      .footer {
+        display: none !important;
+      }
+
+      header.faculty-header {
+        background: #fff !important;
+        border: none !important;
+        color: #000 !important;
+        padding: 20px !important;
+      }
+
+      header.faculty-header h1 {
+        color: #000 !important;
+        -webkit-text-fill-color: initial !important;
+      }
+
+      .faculty-container {
+        display: block !important;
+      }
+
+      .card {
+        height: auto !important;
+        margin-bottom: 20px !important;
+        perspective: none !important;
+        page-break-inside: avoid !important;
+      }
+
+      .card-inner {
+        transform: none !important;
+        transform-style: flat !important;
+      }
+
+      .front {
+        display: none !important;
+      }
+
+      .back {
+        position: static !important;
+        transform: none !important;
+        backface-visibility: visible !important;
+        background: #fff !important;
+        color: #000 !important;
+        border: 1px solid #ddd !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px !important;
+        display: block !important;
+      }
+
+      .back h3 {
+        margin-top: 0;
+        color: #333 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="faculty-page">
+  <nav>
+    <a href="/"><img src="/static/images/logo.png" class="logo" alt="Logo"></a>
+    <div class="nav-links" id="navlinks">
+      <i class="fas fa-times" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/course">COURSE</a></li>
+        <li><a href="/admission">ADMISSIONS</a></li>
+        <li><a href="/fest">FEST</a></li>
+        <li><a href="/faculty" class="active">FACULTY</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+      </ul>
+    </div>
+    <i class="fas fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+  <header class="faculty-header">
+    <h1>Faculty Directory</h1>
+    <div class="college-name">THE NATIONAL COLLEGE BAGEPALLI-561207</div>
+    <p>Meet our dedicated team of professors and lecturers</p>
+  </header>
+
+  <section class="controls">
+    <div class="left-controls" style="display:flex; gap:15px; flex-wrap:wrap">
+      <input id="searchInput" class="search" type="text" placeholder="🔍 Search faculty...">
+      <div class="tabs" id="tabs"></div>
+    </div>
+    <div class="right-controls">
+      <button class="btn" onclick="window.print()">Print PDF</button>
+    </div>
+  </section>
+
+  <section class="faculty-container" id="facultyContainer"></section>
+
+  <footer class="footer" style="text-align:center; padding: 40px;">
+    <h4 id="footer-portal-name">About Us</h4>
+    <p id="footer-motto">Our institution is committed to academic excellence.</p>
+    <p id="footer-copyright">© 2025 THE NATIONAL COLLEGE BAGEPALLI-561207</p>
+
+    <div style="margin-top: 15px; opacity: 0.5; font-size: 0.8rem;">
+      <a href="/admin" style="color: #fff; text-decoration: none;">Admin Portal</a>
+    </div>
+  </footer>
+
+  <script>
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() { navlinks.style.right = "0"; }
+    function hideMenu() { navlinks.style.right = "-200px"; }
+
+    let allFaculty = [];
+    let filteredFaculty = [];
+    let activeCourse = 'all';
+
+    async function initFaculty() {
+      try {
+        const res = await fetch('/api/content');
+        const data = await res.json();
+        const info = data.site_info;
+
+        if (info) {
+          if (document.getElementById('footer-portal-name')) document.getElementById('footer-portal-name').innerText = "About " + info.portal_name;
+          if (document.getElementById('footer-motto')) document.getElementById('footer-motto').innerText = info.motto;
+          if (document.getElementById('footer-copyright')) document.getElementById('footer-copyright').innerHTML = `&copy; ${new Date().getFullYear()} ${info.portal_name} <i class="fas fa-heart"></i> All rights reserved.`;
+        }
+        allFaculty = data.faculty;
+        renderTabs();
+        renderFaculty();
+      } catch (e) { console.error("Faculty Load Fail:", e); }
+    }
+
+    function renderTabs() {
+      const tabsEl = document.getElementById('tabs');
+      const courses = ['All', ...new Set(allFaculty.flatMap(f => f.course.split('|')))];
+      tabsEl.innerHTML = courses.map(c => `
+        <button class="tab" data-course="${c.toLowerCase()}" ${c.toLowerCase() === 'all' ? 'data-active="true"' : ''} onclick="filterByCourse('${c.toLowerCase()}')">${c}</button>
+      `).join('');
+    }
+
+    function renderFaculty() {
+      const container = document.getElementById('facultyContainer');
+      const q = document.getElementById('searchInput').value.toLowerCase();
+
+      const filtered = allFaculty.filter(f => {
+        const matchesSearch = f.name.toLowerCase().includes(q) || f.dept.toLowerCase().includes(q);
+        const matchesCourse = activeCourse === 'all' || f.course.toLowerCase().split('|').includes(activeCourse);
+        return matchesSearch && matchesCourse;
+      });
+
+      container.innerHTML = filtered.map(f => `
+        <div class="card">
+          <div class="card-inner">
+            <div class="front">
+              <div class="avatar">${f.name.split(' ').map(n => n[0]).join('')}</div>
+              <div class="card-title" style="font-weight:600">${f.name}</div>
+              <div class="card-subtitle" style="color:var(--text-muted)">${f.role}</div>
+            </div>
+            <div class="back">
+              <h3>${f.dept}</h3>
+              <p><i class="fas fa-envelope"></i> ${f.email}</p>
+              <p><i class="fas fa-graduation-cap"></i> ${f.spec}</p>
+              <p style="margin-top:10px">Course: ${f.course}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterByCourse(c) {
+      activeCourse = c;
+      document.querySelectorAll('.tab').forEach(t => t.setAttribute('data-active', t.getAttribute('data-course') === c));
+      renderFaculty();
+    }
+
+    document.getElementById('searchInput').addEventListener('input', renderFaculty);
+
+    initFaculty();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Portal | Contact Us</title>
+  <link rel="icon" type="image/png" href="/static/images/logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    .contact-us {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .contact-col {
+      transition: transform 0.3s ease;
+    }
+
+    .contact-col:hover {
+      transform: translateY(-5px);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: 0.3s;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--primary);
+    }
+
+    .contact-item i {
+      font-size: 28px;
+      margin-right: 20px;
+      color: var(--primary);
+      background: rgba(244, 67, 54, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <section class="sub-header">
+    <nav>
+      <a href="/">
+        <img src="/static/images/logo.png" class="logo" alt="College Logo">
+      </a>
+      <div class="nav-links" id="navlinks">
+        <i class="fas fa-times" id="close" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/course">COURSE</a></li>
+          <li><a href="/admission">ADMISSIONS</a></li>
+          <li><a href="/fest">FEST</a></li>
+          <li><a href="/faculty">FACULTY</a></li>
+          <li><a href="/contact" class="active">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fas fa-bars" id="menu" onclick="showMenu()"></i>
+    </nav>
+    <h1>Contact Us</h1>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151348.0589138895!2d77.78189327088528!3d13.655499446032062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb18f6fc6e147a5%3A0x8192b01e7f7508e7!2sThe%20National%20Degree%20Autonomous%20College!5e0!3m2!1sen!2sin!4v1746514968406!5m2!1sen!2sin"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-us">
+    <div class="row">
+
+      <!-- Contact Info -->
+      <div class="contact-col">
+        <div class="contact-item">
+          <i class="fas fa-home"></i>
+          <div>
+            <h5 id="contact-address-title">CHELUR Road, The National College</h5>
+            <p id="contact-address-text">Bagepalli, Karnataka, 561207</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h5 id="contact-phone">+91 1234567890</h5>
+            <p>Monday to Saturday, 10AM to 5PM</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h5 id="contact-email">college@domain.com</h5>
+            <p id="footer-motto-contact">thenationalcollege@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-col">
+        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass-card">
+          <input type="text" id="form-name" placeholder="Enter your Name" required>
+          <input type="email" id="form-email" placeholder="Enter your Email" required>
+          <input type="text" id="form-subject" placeholder="Enter your Subject" required>
+          <textarea id="form-message" rows="8" placeholder="Enter your Message" required></textarea>
+          <button type="submit" class="hero-btn red-btn" id="submit-btn">Send Message</button>
+          <div id="form-status" style="margin-top:20px; text-align:center;"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h4 id="footer-portal-name">About Us</h4>
+    <p id="footer-motto">
+      Our institution is committed to academic excellence, values, and student development.<br>
+      We provide a conducive learning environment nestled in a lush green campus.
+    </p>
+
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p id="footer-copyright">&copy; 2025 The National College <i class="fas fa-heart"></i> All rights reserved.</p>
+
+    <div style="margin-top: 15px; opacity: 0.5; font-size: 0.8rem;">
+      <a href="/admin" style="color: #fff; text-decoration: none;">Admin Portal</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+
+    async function handleContactSubmit(event) {
+      event.preventDefault();
+      const statusDiv = document.getElementById('form-status');
+      const submitBtn = document.getElementById('submit-btn');
+
+      const formData = {
+        type: 'contact',
+        name: document.getElementById('form-name').value,
+        email: document.getElementById('form-email').value,
+        subject: document.getElementById('form-subject').value,
+        message: document.getElementById('form-message').value
+      };
+
+      try {
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Sending...';
+        statusDiv.innerHTML = '';
+
+        const res = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          statusDiv.innerHTML = `<p style="color: #4caf50; background: rgba(76, 175, 80, 0.1); padding: 10px; border-radius: 8px; border: 1px solid #4caf50;">✅ ${result.message}</p>`;
+          document.getElementById('contact-form').reset();
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (e) {
+        statusDiv.innerHTML = `<p style="color: #f44336; background: rgba(244, 67, 54, 0.1); padding: 10px; border-radius: 8px; border: 1px solid #f44336;">❌ Error: ${e.message}</p>`;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Send Message';
+      }
+    }
+  </script>
+
+  <!-- Chatbot Widget -->
+  <div class="chat-icon" id="chat-icon">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      <h3>College Assistant</h3>
+      <i class="fas fa-times" id="close-chat"></i>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="msg bot-msg">Hello! How can I help you today?</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <script src="/static/chatbot.js"></script>
+  <script>
+    async function initGlobalCMS() {
+      try {
+        const res = await fetch('/api/content');
+        const data = await res.json();
+        const info = data.site_info;
+
+        if (info) {
+          if (document.getElementById('footer-portal-name')) document.getElementById('footer-portal-name').innerText = "About " + info.portal_name;
+          if (document.getElementById('footer-motto')) document.getElementById('footer-motto').innerText = info.motto;
+          if (document.getElementById('footer-copyright')) document.getElementById('footer-copyright').innerHTML = `&copy; ${new Date().getFullYear()} ${info.portal_name} <i class="fas fa-heart"></i> All rights reserved.`;
+
+          if (document.getElementById('contact-phone')) document.getElementById('contact-phone').innerText = info.phone;
+          if (document.getElementById('contact-email')) document.getElementById('contact-email').innerText = info.email;
+          if (document.getElementById('contact-address-text')) document.getElementById('contact-address-text').innerText = info.address;
+        }
+      } catch (e) { console.error("Global CMS Load Fail:", e); }
+    }
+    initGlobalCMS();
+  </script>
+</body>
+
+</html>

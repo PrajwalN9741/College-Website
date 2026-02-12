@@ -1,0 +1,26 @@
+{
+    "name": "College Admin Portal",
+    "short_name": "AdminPortal",
+    "description": "The National College Admin Dashboard",
+    "start_url": "/admin",
+    "id": "/admin",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "orientation": "portrait",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/static/images/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/static/images/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

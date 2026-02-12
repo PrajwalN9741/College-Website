@@ -1,0 +1,44 @@
+{
+    "college_name": "National College, Bagepalli",
+    "established": "July 1978",
+    "management": "National Education Society of Karnataka (NES)",
+    "founder": "Dr. H. Narasimhaiah (Dr. HN)",
+    "location": "Bagepalli, Karnataka",
+    "type": "Affiliated College",
+    "approval": "AICTE",
+    "students": 1306,
+    "faculty": 33,
+    "campus_size": "7 Acres",
+    "degrees_offered": 7,
+    "courses_offered": [
+        "BBA",
+        "BA",
+        "B.Com",
+        "B.Sc",
+        "BCA"
+    ],
+    "facilities": {
+        "library": "40,000+ books with national and international journals",
+        "wifi": true,
+        "laboratories": "Modern science and computer labs",
+        "auditorium": "500 seating capacity",
+        "sports": "Available for all students",
+        "gym": "Multi-gym facility",
+        "medical": "Basic health center with periodic checkups",
+        "cafeteria": "Hygienic and affordable"
+    },
+    "placement": {
+        "placement_cell": true,
+        "training_programs": true,
+        "career_guidance": true
+    },
+    "mission": "Promoting education in rural areas and empowering students through quality learning.",
+    "vision": "To build socially responsible, skilled and knowledgeable citizens.",
+    "extra_curricular": [
+        "Cultural Activities",
+        "NSS",
+        "Sports",
+        "Drama Festival",
+        "Annual Day Celebrations"
+    ]
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Portal | Courses</title>
+  <link rel="icon" type="image/png" href="/static/images/logo.png">
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <section class="sub-header">
+    <nav>
+      <a href="/">
+        <img src="/static/images/logo.png" class="logo" alt="College Logo">
+      </a>
+      <div class="nav-links" id="navlinks">
+        <i class="fas fa-times" id="close" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/course" class="active">COURSE</a></li>
+          <li><a href="/admission">ADMISSIONS</a></li>
+          <li><a href="/fest">FEST</a></li>
+          <li><a href="/faculty">FACULTY</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fas fa-bars" id="menu" onclick="showMenu()"></i>
+    </nav>
+    <h1>Our Courses</h1>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="course">
+    <h1>Courses We Offer</h1>
+    <p>
+      We offer Intermediate (PUC) and Degree programs including BCA, B.Com, BBA, and B.Sc,
+      designed to provide quality education and practical skills for a successful career.
+    </p>
+
+    <div class="row">
+      <!-- Intermediate (PUC) -->
+      <div class="course-col glass-card">
+        <h3>Intermediate (PUC)</h3>
+        <p>
+          <strong>Streams:</strong> Science (PCMB/PCMCs), Commerce (EBACs), Arts.<br>
+          A two-year pre-university course that builds a strong foundation for higher education.
+        </p>
+      </div>
+
+      <!-- BCA -->
+      <div class="course-col glass-card">
+        <h3>BCA</h3>
+        <p>
+          <strong>Bachelor of Computer Applications</strong><br>
+          Focuses on programming, software development, web design, and database management to prepare students for the
+          IT industry.
+        </p>
+      </div>
+
+      <!-- B.Com -->
+      <div class="course-col glass-card">
+        <h3>B.Com</h3>
+        <p>
+          <strong>Bachelor of Commerce</strong><br>
+          Covers accounting, finance, taxation, and business law, ideal for aspiring accountants and financial analysts.
+        </p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px;">
+      <!-- BBA -->
+      <div class="course-col glass-card">
+        <h3>BBA</h3>
+        <p>
+          <strong>Bachelor of Business Administration</strong><br>
+          Develops leadership, management, and entrepreneurial skills for business and corporate roles.
+        </p>
+      </div>
+
+      <!-- B.Sc -->
+      <div class="course-col glass-card">
+        <h3>B.Sc</h3>
+        <p>
+          <strong>Bachelor of Science</strong><br>
+          Offers specializations in Physics, Chemistry, Mathematics, and Computer Science for research and technical
+          careers.
+        </p>
+      </div>
+
+      <!-- BA -->
+      <div class="course-col glass-card">
+        <h3>BA</h3>
+        <p>
+          <strong>Bachelor of Arts</strong><br>
+          History, Economics, Political Science. Fosters critical thinking and understanding of society and humanities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="facilities">
+    <h1>Our Premium Facilities</h1>
+    <p>
+      World-class infrastructure designed to support academic and personal growth.
+    </p>
+
+    <div class="row">
+      <div class="facilities-col glass-card">
+        <img src="/static/images/library.jpg" alt="Library">
+        <h3>Library</h3>
+        <p>
+          A vast repository with over <strong>40,000 books</strong>, national/international journals, and a
+          well-equipped reference section.
+        </p>
+      </div>
+
+      <div class="facilities-col glass-card">
+        <img src="/static/images/computer.jpg" alt="IT Lab">
+        <h3>I.T Infrastructure</h3>
+        <p>
+          Located in the Silver Jubilee building, featuring <strong>40+ modern systems</strong>, high-speed Wi-Fi, and
+          specialized software labs.
+        </p>
+      </div>
+
+      <div class="facilities-col glass-card">
+        <img src="/static/images/auditorium.jpg" alt="Auditorium">
+        <h3>Auditorium</h3>
+        <p>
+          A spacious <strong>500-seater</strong> venue with advanced audio-visual systems for cultural events, drama
+          festivals, and college functions.
+        </p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:20px;">
+      <div class="facilities-col glass-card">
+        <img src="/static/images/laboratory.jpg" alt="Labs">
+        <h3>Laboratories</h3>
+        <p>
+          State-of-the-art Science and Computer labs with smart boards and modern equipment worth over ₹50 Lakhs.
+        </p>
+      </div>
+
+      <div class="facilities-col glass-card">
+        <img src="/static/images/gym.jpg" alt="Gym">
+        <h3>Multi-Gym & Sports</h3>
+        <p>
+          Well-equipped gymnasium and extensive sports facilities to promote physical fitness and well-being.
+        </p>
+      </div>
+
+      <div class="facilities-col glass-card">
+        <img src="/static/images/cafeteria.jpg" alt="Cafeteria">
+        <h3>Cafeteria</h3>
+        <p>
+          Hygienic and spacious cafeteria serving nutritious, healthy South Indian food at affordable costs.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Comment Section -->
+  <div class="comment-box">
+    <h3>Leave a Comment</h3>
+    <form class="comment-form" method="POST" action="comment-handler.php">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Enter Email" required>
+      <textarea name="comment" rows="5" placeholder="Your Comment" required></textarea>
+      <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+    </form>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h4 id="footer-portal-name">About Us</h4>
+    <p id="footer-motto">
+      Our institution is committed to academic excellence, values, and student development.<br>
+      We provide a conducive learning environment nestled in a lush green campus.
+    </p>
+
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p id="footer-copyright">&copy; 2025 The National College <i class="fas fa-heart"></i> All rights reserved.</p>
+
+    <div style="margin-top: 15px; opacity: 0.5; font-size: 0.8rem;">
+      <a href="/admin" style="color: #fff; text-decoration: none;">Admin Portal</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+  </script>
+
+  <!-- Chatbot Widget -->
+  <div class="chat-icon" id="chat-icon">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      <h3>College Assistant</h3>
+      <i class="fas fa-times" id="close-chat"></i>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="msg bot-msg">Hello! How can I help you today?</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <script src="/static/chatbot.js"></script>
+  <script>
+    async function initGlobalCMS() {
+      try {
+        const res = await fetch('/api/content');
+        const data = await res.json();
+        const info = data.site_info;
+        if (info) {
+          if (document.getElementById('footer-portal-name')) document.getElementById('footer-portal-name').innerText = "About " + info.portal_name;
+          if (document.getElementById('footer-motto')) document.getElementById('footer-motto').innerText = info.motto;
+          if (document.getElementById('footer-copyright')) document.getElementById('footer-copyright').innerHTML = `&copy; ${new Date().getFullYear()} ${info.portal_name} <i class="fas fa-heart"></i> All rights reserved.`;
+        }
+      } catch (e) { console.error("Global CMS Load Fail:", e); }
+    }
+    initGlobalCMS();
+  </script>
+</body>
+
+</html>

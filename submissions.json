@@ -1,0 +1,29 @@
+[
+  {
+    "type": "contact",
+    "name": "Prajwal N",
+    "email": "prajwal@testing.com",
+    "subject": "Inquiry about BCA",
+    "message": "Hello, I would like to know the fee structure for BCA 2026.",
+    "timestamp": "2026-02-12 23:22:00",
+    "status": "Reviewed"
+  },
+  {
+    "type": "admission",
+    "name": "Adarsh S",
+    "email": "adarsh@testing.com",
+    "mobile": "9876543210",
+    "program": "bca",
+    "timestamp": "2026-02-12 23:23:00",
+    "status": "Reviewed"
+  },
+  {
+    "type": "contact",
+    "name": "prajwal",
+    "email": "prajwalrajn9@gmail.com",
+    "subject": "hi",
+    "message": "asdfghjkl",
+    "timestamp": "2026-02-12 23:23:25",
+    "status": "Reviewed"
+  }
+]

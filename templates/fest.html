@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VIBRANCE 2025 — College Cultural Fest</title>
+  <link rel="icon" type="image/png" href="/static/images/logo.png">
+
+  <!-- Global Styles & Fonts -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <style>
+    /* Page Specific Overrides */
+    :root {
+      --accent: #ff4d6d;
+      --accent2: #6c5ce7;
+      --bg1: #0a0f1c;
+      --bg2: #161b2e;
+      --glass: rgba(255, 255, 255, 0.08);
+      --radius: 16px;
+    }
+
+    body.fest-page {
+      min-height: 100vh;
+      background: linear-gradient(-45deg, var(--bg1), var(--bg2), #1a2340, #0f1724);
+      background-size: 400% 400%;
+      animation: bgmove 20s ease infinite;
+      color: #e8eefc;
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-family: "Poppins", sans-serif;
+    }
+
+    @keyframes bgmove {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem
+    }
+
+    /* Custom Header for Fest Content */
+    header.fest-header {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem
+    }
+
+    @media(max-width:960px) {
+      header.fest-header {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .hero-card {
+      backdrop-filter: blur(14px);
+      background: var(--glass);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-card h1 {
+      font-size: 2rem;
+      margin-bottom: .5rem;
+      color: #fff
+    }
+
+    p.lead {
+      color: #b3bdd3;
+      margin-bottom: 1rem
+    }
+
+    .pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      padding: .4rem .8rem;
+      border-radius: 999px;
+      font-size: .8rem;
+      margin-right: .4rem
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #fff;
+      border: 0;
+      padding: .8rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(108, 92, 231, .5);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15)
+    }
+
+    .poster {
+      text-align: center;
+      background: var(--glass);
+      border-radius: var(--radius);
+      padding: 1rem
+    }
+
+    .poster img {
+      width: 100%;
+      border-radius: 10px
+    }
+
+    .date {
+      margin-top: .5rem;
+      font-weight: 600
+    }
+
+    .countdown {
+      display: flex;
+      gap: 10px;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+      justify-content: flex-start
+    }
+
+    .unit {
+      background: rgba(255, 255, 255, 0.05);
+      padding: .8rem;
+      border-radius: 10px;
+      min-width: 70px;
+      text-align: center;
+      transition: transform .3s
+    }
+
+    .unit .num {
+      font-size: 1.4rem;
+      font-weight: 700
+    }
+
+    .unit .label {
+      font-size: .75rem;
+      color: #aaa
+    }
+
+    form {
+      display: grid;
+      gap: .6rem
+    }
+
+    input,
+    select {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: .6rem;
+      border-radius: 8px;
+      color: #fff
+    }
+
+    .form-btns {
+      display: flex;
+      gap: .5rem;
+      margin-top: .5rem
+    }
+
+    .event-info {
+      margin-top: 1rem;
+      color: #b3bdd3;
+      font-size: .9rem
+    }
+
+    footer.fest-footer {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: .9rem;
+      color: #9ba6c1
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      color: #fff;
+      padding: .8rem 1.2rem;
+      border-radius: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      z-index: 9999
+    }
+
+    .toast.show {
+      opacity: 1;
+      pointer-events: auto
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    #shareModal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(15, 20, 36, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 1.5rem;
+      z-index: 9999;
+      min-width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .socialBtn {
+      background: linear-gradient(135deg, #ff4d6d, #6c5ce7);
+      border: none;
+      color: #fff;
+      padding: .6rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .socialBtn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(108, 92, 231, .5);
+    }
+
+    #updatesBar {
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: .6rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 998;
+      font-weight: 500;
+      letter-spacing: .4px;
+    }
+
+    #updatesContent {
+      display: inline-block;
+      animation: scroll 18s linear infinite;
+    }
+
+    #updatesBar:hover #updatesContent {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(100%)
+      }
+
+      to {
+        transform: translateX(-100%)
+      }
+    }
+
+    /* Functionality: Timeline */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 3rem 0 1.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      margin-bottom: 30px;
+      position: relative;
+      width: 50%;
+      padding: 0 40px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 16px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 50%;
+      border: 3px solid #1a2340;
+      box-shadow: 0 0 10px var(--accent);
+      z-index: 10;
+    }
+
+    .timeline-item:nth-child(odd)::after {
+      right: -8px;
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: -8px;
+    }
+
+    .time-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .time-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent2);
+      box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+    }
+
+    .time-card h3 {
+      color: var(--accent2);
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .time-card span {
+      display: block;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 8px;
+      font-family: monospace;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        padding-right: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(odd)::after,
+      .timeline-item:nth-child(even)::after {
+        left: 12px;
+        right: auto;
+      }
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      opacity: 0;
+      transition: 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 15px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* FAQ */
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: rgba(255, 255, 255, 0.03);
+      margin-bottom: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-question {
+      padding: 15px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .faq-question:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      padding: 0 20px;
+      color: #b3bdd3;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 15px 20px;
+      max-height: 200px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-item.active .faq-question {
+      color: var(--accent);
+    }
+
+    .rotate-icon {
+      transition: 0.3s;
+    }
+
+    .faq-item.active .rotate-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Navigation Overrides */
+    nav {
+      background: rgba(0, 0, 0, 0.5) !important;
+      position: relative !important;
+    }
+  </style>
+</head>
+
+<body class="fest-page" data-event-date="2026-03-05T09:00:00+05:30">
+
+  <!-- Global Navigation -->
+  <nav>
+    <a href="/"><img src="/static/images/logo.png" class="logo" alt="College Logo"></a>
+    <div class="nav-links" id="navlinks">
+      <i class="fas fa-times" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/course">COURSE</a></li>
+        <li><a href="/admission">ADMISSIONS</a></li>
+        <li><a href="/fest" class="active">FEST</a></li>
+        <li><a href="/faculty">FACULTY</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+      </ul>
+    </div>
+    <i class="fas fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+  <!-- Live Updates -->
+  <div id="updatesBar">
+    <div id="updatesContent">
+      <!-- Loaded dynamically -->
+    </div>
+  </div>
+
+  <div class="container">
+    <header class="fest-header">
+      <div class="hero-card">
+        <div class="pill-row">
+          <span class="pill">College Day 2026</span>
+          <span class="pill">VIBRANCE Fest</span>
+          <span class="pill">3-Day Mega Event</span>
+        </div>
+        <h1 id="event-title">College Day & VIBRANCE 2026</h1>
+        <p class="lead" id="event-lead">
+          A three-day grand celebration of academic excellence, cultural heritage, and youthful creativity.
+        </p>
+
+        <div class="countdown" id="countdown">
+          <div class="unit">
+            <div class="num" id="days">--</div>
+            <div class="label">Days</div>
+          </div>
+          <div class="unit">
+            <div class="num" id="hours">--</div>
+            <div class="label">Hours</div>
+          </div>
+          <div class="unit">
+            <div class="num" id="minutes">--</div>
+            <div class="label">Min</div>
+          </div>
+          <div class="unit">
+            <div class="num" id="seconds">--</div>
+            <div class="label">Sec</div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn" id="registerBtn">Register & Pay</button>
+          <button class="btn secondary" id="shareBtn">Share</button>
+          <button class="btn secondary" id="downloadPoster">Poster PDF</button>
+        </div>
+
+        <p class="event-info">
+          Venue: Main Campus & Auditorium • Date: <span id="eventDateText">March 5–7, 2026</span>
+        </p>
+
+        <!-- Registration Form -->
+        <div id="registrationPanel" class="card hidden" style="margin-top: 20px;">
+          <h3 style="margin-bottom: 10px;">Event Registration</h3>
+          <form id="regForm">
+            <input name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input name="college" placeholder="College/Institute" required>
+            <select name="category" required>
+              <option value="">Select Category</option>
+              <option>Music</option>
+              <option>Dance</option>
+              <option>Drama</option>
+              <option>Art</option>
+              <option>Workshop</option>
+            </select>
+            <input type="number" name="amount" placeholder="Amount (₹)" required value="100">
+            <div class="form-btns">
+              <button type="submit" class="btn">Pay & Register</button>
+              <button type="button" class="btn secondary" id="exportBtn">Export CSV</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="poster">
+        <img src="https://images.unsplash.com/photo-1540575861501-7ad05823c23d?q=80&w=800" alt="Fest poster">
+        <div class="date">March 5–7 • Grand Venue</div>
+      </div>
+    </header>
+
+    <!-- Timeline Section -->
+    <h2 class="section-title">Event Schedule (3 Days)</h2>
+    <div class="timeline" id="timeline-container">
+      <!-- Loaded dynamically -->
+    </div>
+
+    <!-- Gallery Section -->
+    <h2 class="section-title">Flashback 2024</h2>
+    <div class="gallery-grid" id="fest-gallery">
+      <!-- Gallery items loaded dynamically -->
+    </div>
+
+    <!-- FAQ Section -->
+    <h2 class="section-title">Freq. Asked Questions</h2>
+    <div class="faq-container" id="fest-faq">
+      <!-- FAQ items loaded dynamically -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <h4 id="footer-portal-name">About Us</h4>
+      <p id="footer-motto">
+        Our institution is committed to academic excellence, values, and student development.<br>
+        We provide a conducive learning environment nestled in a lush green campus.
+      </p>
+
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <p id="footer-copyright">&copy; 2025 The National College <i class="fas fa-heart"></i> All rights reserved.</p>
+
+      <div style="margin-top: 15px; opacity: 0.5; font-size: 0.8rem;">
+        <a href="/admin" style="color: #fff; text-decoration: none;">Admin Portal</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Message</div>
+
+  <!-- Share Modal -->
+  <div id="shareModal" class="hidden">
+    <strong>Share VIBRANCE 2025</strong>
+    <div class="social-buttons">
+      <button class="socialBtn" data-platform="twitter">🐦 Twitter</button>
+      <button class="socialBtn" data-platform="whatsapp">💬 WhatsApp</button>
+      <button class="socialBtn" data-platform="facebook">📘 Facebook</button>
+      <button class="socialBtn" data-platform="telegram">✈️ Telegram</button>
+      <button class="socialBtn" data-platform="copy">📋 Copy Link</button>
+    </div>
+    <button id="closeShare" class="btn secondary" style="margin-top:20px; width:100%">Close</button>
+  </div>
+
+  <!-- Chatbot Widget -->
+  <div class="chat-icon" id="chat-icon">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      <h3>College Assistant</h3>
+      <i class="fas fa-times" id="close-chat"></i>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="msg bot-msg">Hello! How can I help you today?</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <script src="/static/chatbot.js"></script>
+
+  <script>
+    // Navigation Logic
+    const navlinks = document.getElementById("navlinks");
+    function showMenu() { navlinks.style.right = "0"; }
+    function hideMenu() { navlinks.style.right = "-200px"; }
+
+    // Fest Page Logic
+    let eventDate;
+
+    async function initFest() {
+      try {
+        const res = await fetch('/api/content');
+        if (!res.ok) return;
+        const data = await res.json();
+        const fest = data.fest;
+        const info = data.site_info;
+
+        if (info) {
+          if (document.getElementById('footer-portal-name')) document.getElementById('footer-portal-name').innerText = "About " + info.portal_name;
+          if (document.getElementById('footer-motto')) document.getElementById('footer-motto').innerText = info.motto;
+          if (document.getElementById('footer-copyright')) document.getElementById('footer-copyright').innerHTML = `&copy; ${new Date().getFullYear()} ${info.portal_name} <i class="fas fa-heart"></i> All rights reserved.`;
+        }
+
+        document.getElementById('event-title').innerText = fest.title;
+        document.getElementById('event-lead').innerText = fest.lead;
+        document.getElementById('updatesContent').innerText = fest.marquee;
+        document.getElementById('eventDateText').innerText = fest.date_text;
+        eventDate = new Date(fest.target_date).getTime();
+
+        const timeline = document.getElementById('timeline-container');
+        timeline.innerHTML = fest.schedule.map(s => `
+          <div class="timeline-item">
+            <div class="time-card">
+              <span>${s.time}</span>
+              ${s.name ? `<p style="color:var(--accent); font-weight:700;">DAY ${s.day}: ${s.name}</p>` : ''}
+              <h3>${s.title}</h3>
+              <p>${s.desc}</p>
+            </div>
+          </div>
+        `).join('');
+
+        // Render Gallery
+        const gallery = document.getElementById('fest-gallery');
+        gallery.innerHTML = fest.gallery.map(g => `
+          <div class="gallery-item">
+            <img src="${g.url}" alt="${g.caption}" loading="lazy">
+            <div class="gallery-overlay">
+              <p>${g.caption}</p>
+            </div>
+          </div>
+        `).join('');
+
+        // Render FAQ
+        const faq = document.getElementById('fest-faq');
+        faq.innerHTML = fest.faq.map(f => `
+          <div class="faq-item">
+            <div class="faq-question">
+              ${f.q}
+              <i class="fas fa-chevron-down rotate-icon"></i>
+            </div>
+            <div class="faq-answer">
+              ${f.a}
+            </div>
+          </div>
+        `).join('');
+
+        // Re-attach listeners for new FAQ elements
+        document.querySelectorAll('.faq-question').forEach(item => {
+          item.onclick = () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+          }
+        });
+
+        setInterval(updateCountdown, 1000);
+      } catch (e) { console.error("Fest Load Fail:", e); }
+    }
+
+    function updateCountdown() {
+      if (!eventDate) return;
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = days > 0 ? days : 0;
+      document.getElementById('hours').innerText = hours > 0 ? hours : 0;
+      document.getElementById('minutes').innerText = minutes > 0 ? minutes : 0;
+      document.getElementById('seconds').innerText = seconds > 0 ? seconds : 0;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Toggle Registration
+    const registerBtn = document.getElementById('registerBtn');
+    const registrationPanel = document.getElementById('registrationPanel');
+    registerBtn.addEventListener('click', () => {
+      registrationPanel.classList.toggle('hidden');
+      registrationPanel.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Share Modal
+    const shareBtn = document.getElementById('shareBtn');
+    const shareModal = document.getElementById('shareModal');
+    const closeShare = document.getElementById('closeShare');
+
+    shareBtn.addEventListener('click', () => {
+      shareModal.classList.remove('hidden');
+    });
+
+    closeShare.addEventListener('click', () => {
+      shareModal.classList.add('hidden');
+    });
+
+    // Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.innerText = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // Form Submission
+    document.getElementById('regForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        btn.disabled = true;
+        btn.innerText = "Registering...";
+
+        const res = await fetch('/api/register-event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          showToast("Registration Successful! See you there.");
+          registrationPanel.classList.add('hidden');
+          e.target.reset();
+        } else {
+          showToast("Registration failed. Please try again.");
+        }
+      } catch (err) {
+        showToast("Error connecting to server.");
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "Pay & Register";
+      }
+    });
+
+    // Social Share Buttons (Mock)
+    document.querySelectorAll('.socialBtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.platform === 'copy') {
+          navigator.clipboard.writeText(window.location.href);
+          showToast("Link Copied!");
+        } else {
+          showToast(`Shared to ${btn.dataset.platform}!`);
+        }
+        shareModal.classList.add('hidden');
+      });
+    });
+
+    // Download Poster (Mock)
+    document.getElementById('downloadPoster').addEventListener('click', () => {
+      showToast("Downloading Poster...");
+    });
+
+    // FAQ Accordion Logic
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+    initFest();
+  </script>
+</body>
+
+</html>

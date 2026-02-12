@@ -1,0 +1,23 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+
+# Temporary files
+*_temp
+*.log
+verify_deploy.py
+test_*.py
+add_admin_link.py
