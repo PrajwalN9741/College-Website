@@ -16,5 +16,14 @@
     "program": "bca",
     "timestamp": "2026-02-12 23:38:57",
     "status": "Reviewed"
+  },
+  {
+    "form_type": "admission",
+    "name": "prajwal prajju",
+    "email": "prajwalrajn9@gmail.com",
+    "mobile": "9741245850",
+    "program": "ba",
+    "timestamp": "2026-02-13 01:05:37",
+    "status": "Pending"
   }
 ]

@@ -25,5 +25,14 @@
     "message": "asdfghjkl",
     "timestamp": "2026-02-12 23:23:25",
     "status": "Reviewed"
+  },
+  {
+    "type": "contact",
+    "name": "prajwal",
+    "email": "prajwalrajn9@gmail.com",
+    "subject": "hi",
+    "message": "sadfghjkl",
+    "timestamp": "2026-02-13 01:05:08",
+    "status": "Pending"
   }
 ]

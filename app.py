@@ -41,6 +41,10 @@ def serve_manifest():
 def serve_sw():
     return send_from_directory('static', 'sw.js')
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('static', 'images/logo.png')
+
 # --------------------------------------------------
 # Auth Decorator
 # --------------------------------------------------
@@ -160,7 +164,7 @@ def contact(): return render_template("contact.html")
 def course(): return render_template("course.html")
 
 @app.route("/faculty")
-def faculty(): return render_template("Faculty.html")
+def faculty(): return render_template("faculty.html")
 
 @app.route("/fest")
 def fest(): return render_template("fest.html")
